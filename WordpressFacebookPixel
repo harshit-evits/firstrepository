@@ -1,0 +1,11 @@
+jQuery(document).on('click','#place_order',function(){
+		//alert('test');
+    var am = jQuery('.order-total').find('.woocommerce-Price-amount').text();
+		//alert(am);
+    slice = am.slice(1);
+	   var am1=slice.replace(/,/g, '');
+    amount= parseFloat(am1).toFixed(2);
+	   //alert(amount);
+		
+    fbq('track', 'Purchase', {currency: "INR", value: amount});
+})		
