@@ -1,3 +1,5 @@
+/* Source Code Regarding Facebook Pixel*/
+
 jQuery(document).on('click','#place_order',function(){
 		//alert('test');
     var am = jQuery('.order-total').find('.woocommerce-Price-amount').text();
