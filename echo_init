@@ -1,0 +1,9 @@
+
+  <script src="https://rawgit.com/toddmotto/echo/master/dist/echo.js"  ></script>
+  <script>
+echo.init();
+</script>
+
+
+<!-- To use -->
+<img src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/ajax-loader.gif" data-echo="{{ block.settings.img_pick | img_url: 'master' }}">
