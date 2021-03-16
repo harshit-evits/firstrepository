@@ -1,0 +1,71 @@
+
+Facebook Pixel for Magento 2 Extensions
+https://www.simicart.com/blog/magento-facebook-pixel/
+
+
+Facebook Pixel for Magento 2 Extensions Mannual Installation guide Link
+https://magentip.com/add-facebook-pixel-magento-2/
+
+
+
+
+<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1952807638131249');
+  fbq('track', 'PageView');
+</script>
+<noscript>
+  <img height="1" width="1" style="display:none" 
+       src="https://www.facebook.com/tr?id=1952807638131249&ev=PageView&noscript=1"/>
+</noscript>
+<!-- End Facebook Pixel Code -->
+
+<script>
+
+//For page view Events
+fbq('track', 'PageView');
+
+//button click add to cart
+<script type="text/javascript">
+$( '.btn--add-to-cart' ).click(function() {
+fbq('track', 'AddToCart');
+});
+</script>
+
+// purchase code (Values to be passed dynamically currency and purchase value)
+<script type="text/javascript">
+  $('#$addToCartButton').click(function() {
+    fbq('track', 'Purchase', {currency: "USD", value: 30.00});
+  });
+</script>
+
+//Initiate Checkout (while initialising checkout)
+
+<script>
+fbq('track', 'InitiateCheckout');
+
+</script>
+
+
+//Add payment info (at checkout information filling)	
+<script>
+fbq('track', 'AddPaymentInfo');
+</script>
+
+
+
+
+
+
+
+
+
+
