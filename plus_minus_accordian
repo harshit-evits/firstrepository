@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Accordion test</title>
+    <style>
+      ul#mg-accordion{
+        list-style-type: none;                          
+      }
+      ul#mg-accordion li.dropdown > ul{
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="my-menu">
+            <ul id="mg-accordion"class="row"> 
+              <li><a href="#" title="">All Italian Recipes</a></li>
+              <li class="dropdown"><a href="#" title="">First courses</a>  
+                <ul class="submenu">
+                  <li><a href="#">All first courses</a></li>    
+                  <li><a href="#">All pasta's recipes</a></li>    
+                  <li><a href="#">All rice's recipes</a></li>    
+                  <li class="dropdown"><a href="#"> Pasta</a>                 
+                    <ul class="submenu">
+                      <li><a href="#">Carbonara</a></li>    
+                      <li><a href="#">Amatriciana</a></li>    
+                      <li><a href="#">Al pesto</a></li>    
+                      <li><a href="#">Pomodoro e basilico</a></li>    
+                    </ul>
+                  </li>
+                  <li class="dropdown"><a href="#">Rice</a>                 
+                    <ul class="submenu">
+                      <li><a href="#">Milanese</a></li>
+                      <li><a href="#">With mushrooms</a></li>
+                      <li><a href="#">With peas</a></li>
+                      <li><a href="#">With sea food</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="#">Steack</a>  
+                <ul class="submenu">
+                  <li><a href="#">Stroganoff steaks</a></li>    
+                  <li><a href="#">Steak & chips</a></li>    
+                  <li><a href="#">Steak in red wine sauce</a></li>    
+                  <li><a href="#"> Horseradish butter steaks</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="#">Fishes</a>  
+                <ul class="submenu">
+                  <li><a href="#">Smoky hake, beans & greens</a></li>    
+                  <li><a href="#">Grilled miso salmon with rice noodles</a></li>    
+                  <li><a href="#">Coconut fish curry</a></li>    
+                  <li><a href="#">Seafood tagine</a></li>    
+                </ul>
+              </li>
+              <li class="dropdown"><a href="#">Fruits</a>  
+                <ul class="submenu">
+                  <li><a href="accordion.php">Apricots in syrup with rosemary</a></li>    
+                  <li><a href="#">Black cherries cinnamon</a></li>    
+                  <li><a href="#">Caramelized pineapple with cream</a></li>    
+                </ul>
+              </li>
+              <li class="dropdown"><a href="#">Desserts</a>  
+                <ul class="submenu">
+                  <li><a href="#">Chocolate pudding</a></li>    
+                  <li><a href="#">Tuscan chestnut cake</a></li>    
+                  <li><a href="#">Hazelnut tart with fig jam</a></li>    
+                  <li class="dropdown"><a href="#">Desserts</a>  
+                    <ul class="submenu">
+                      <li><a href="#">Chocolate pudding</a></li>    
+                      <li><a href="#">Tuscan chestnut cake</a></li>    
+                      <li><a href="#">Hazelnut tart with fig jam</a></li>    
+                      <li class="dropdown"><a href="#">Desserts</a>  
+                        <ul class="submenu">
+                          <li><a href="#">Chocolate pudding</a></li>    
+                          <li><a href="#">Tuscan chestnut cake</a></li>    
+                          <li><a href="#">Hazelnut tart with fig jam</a></li>    
+                          <li class="dropdown"><a href="#">Desserts</a>  
+                            <ul class="submenu">
+                              <li><a href="#">Chocolate pudding</a></li>    
+                              <li><a href="#">Tuscan chestnut cake</a></li>    
+                              <li><a href="#">Hazelnut tart with fig jam</a></li>    
+                            </ul>
+                          </li>
+                          <li class="dropdown"><a href="#">Desserts</a>  
+                            <ul class="submenu">
+                              <li><a href="#">Chocolate pudding</a></li>    
+                              <li><a href="#">Tuscan chestnut cake</a></li>    
+                              <li><a href="#">Hazelnut tart with fig jam</a></li>    
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="dropdown"><a href="#">Desserts</a>  
+                        <ul class="submenu">
+                          <li><a href="#">Chocolate pudding</a></li>    
+                          <li><a href="#">Tuscan chestnut cake</a></li>    
+                          <li><a href="#">Hazelnut tart with fig jam</a></li>    
+                          <li class="dropdown"><a href="#">Desserts</a>  
+                            <ul class="submenu">
+                              <li><a href="#">Chocolate pudding</a></li>    
+                              <li><a href="#">Tuscan chestnut cake</a></li>    
+                              <li><a href="#">Hazelnut tart with fig jam</a></li>    
+                            </ul>
+                          </li>
+                          <li class="dropdown"><a href="#">Desserts</a>  
+                            <ul class="submenu">
+                              <li><a href="#">Chocolate pudding</a></li>    
+                              <li><a href="#">Tuscan chestnut cake</a></li>    
+                              <li><a href="#">Hazelnut tart with fig jam</a></li>    
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul> 
+          </nav>        
+        </div>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript">
+       $(document).ready(function () {
+           var mymenu = $('ul#mg-accordion');
+           var dropdowns = $(mymenu.find('li.dropdown > a'));
+           dropdowns.each(function () {
+               $(this).prepend('+ ');//we add a + (plus) symbol to highlight the fact that the node holds a submenu
+           });
+           dropdowns.on('click', function (e) {
+               e.preventDefault();
+               //Following 5 lines change the plus/minus symbols accordingly to the submenu state
+               if ($(this).text().charAt(0) === '+') {
+                   $(this).text($(this).text().replace('+', '-'));
+               } else {
+                   $(this).text($(this).text().replace('-', '+'));
+               }
+               var items = $(this).parents().siblings().find('ul.submenu');
+               items.each(function () {
+                   if ($(this).is(':visible')) {
+                       $(this).slideUp('slow');
+                       //we update plus/minus symbol in all siblings submenus 
+                       $(this).siblings('.dropdown a').text($(this).siblings('.dropdown a').text().replace('-', '+'));
+                   }
+               });
+               $(this).siblings('ul.submenu').slideToggle();
+           });
+       });
+    </script>           
+  </body>
+</html>
+
+
+<!-- https://www.codingfix.com/simplest-jquery-accordion-ever/ -->
