@@ -1,0 +1,4 @@
+var regex = /[+-]?\d+(\.\d+)?/g;
+  var str2 = prices;
+var floats2 = str2.match(regex).map(function(v) { return parseFloat(v); });
+console.log(floats2);
